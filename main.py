@@ -28,7 +28,5 @@ def main():
         else:
             st.write("Your score is", total_score, ". This doesn't indicate dysfunctional coronavirus-related anxiety. \
             But, if you feel something's wrong, you should still consult a mental health professional.")
-        st.write("Please note: This tool is not a substitute for professional medical advice.")
-
 if __name__ == "__main__":
     main()
