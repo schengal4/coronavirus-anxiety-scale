@@ -1,43 +1,33 @@
-
 import streamlit as st
 
-def cas_score(responses):
-    return sum(responses)
+def main():
+    st.title("Coronavirus Anxiety Scale (CAS)")
+    st.write("Please indicate how often you've experienced the following over the last 2 weeks.")
 
-st.title('Coronavirus Anxiety Scale (CAS)')
+    # Define the questions
+    questions = [
+        "I felt dizzy, lightheaded, or faint when I read or listened to news about the coronavirus.",
+        "I had trouble falling or staying asleep because I was thinking about the coronavirus.",
+        "I felt paralyzed or frozen when I thought about or was exposed to information about the coronavirus.",
+        "I lost interest in eating when I thought about or was exposed to information about the coronavirus.",
+        "I felt nauseous or had stomach problems when I thought about or was exposed to information about the coronavirus."
+    ]
 
-st.write("""
-### Instructions
-Please indicate how often you've felt the following ways in the past two weeks.
-""")
+    # Initialize the total score
+    total_score = 0
 
-options = ['Not at all', 'Rarely', 'Sometimes', 'Often', 'Nearly every day']
+    # Iterate over questions
+    for i, question in enumerate(questions, 1):
+        response = st.radio(f"{i}. {question}", range(5), key=f"q{i}")
+        total_score += response
 
-# Sample questions for CAS (Make sure you have the right and full list)
-questions = [
-    "I felt dizzy, lightheaded, or faint, when I read or listened to news about the coronavirus.",
-    "I felt an increased heart rate or palpitations when I thought about or was exposed to information about the coronavirus.",
-    "I had trouble falling asleep or staying asleep because I was thinking about the coronavirus.",
-    "I felt paralyzed or frozen when I thought about or was exposed to information about the coronavirus."
-]
+    # Submit button
+    if st.button('Submit'):
+        if total_score >= 9:
+            st.write("Your score is", total_score, ". This may indicate significant coronavirus-related anxiety. It's advisable to consult a healthcare professional for a more comprehensive evaluation.")
+        else:
+            st.write("Your score is", total_score, ".")
+        st.write("Please note: This tool is for informational purposes only and not a substitute for professional medical advice.")
 
-responses = [st.selectbox(q, options) for q in questions]
-
-# Map the responses to scores (0-4)
-scores = [options.index(r) for r in responses]
-
-total_score = cas_score(scores)
-
-st.write(f"## Your CAS Score is: {total_score}")
-
-if total_score <= 5:
-    st.write("Your anxiety level related to Coronavirus seems to be low.")
-elif 5 < total_score <= 9:
-    st.write("Your anxiety level related to Coronavirus is moderate.")
-else:
-    st.write("Your anxiety level related to Coronavirus is high. It's recommended to speak with a professional.")
-
-st.write("""
-**Note:** This is a basic screener and should not be used as a diagnostic tool.
-Always consult with a mental health professional for a comprehensive evaluation.
-""")
+if __name__ == "__main__":
+    main()
