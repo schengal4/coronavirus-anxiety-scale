@@ -2,7 +2,6 @@ import streamlit as st
 
 def main():
     st.title("Coronavirus Anxiety Scale (CAS)")
-    st.write(
     st.write("**Instructions"": Please indicate how often you've experienced the following over the last 2 weeks.\n \
     0 = Not at all, 1 = Rare, less than a day or two, 2 = Several days, 3 = More than 7 days, 4 = Nearly every day over the last 2 weeks.")
 
