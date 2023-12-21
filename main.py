@@ -15,13 +15,11 @@ def main():
         "I felt nauseous or had stomach problems when I thought about or was exposed to information about the coronavirus."
     ]
 
-    # Initialize the total score
-    total_score = 0
-
     responses = [st.selectbox(q, options) for q in questions]
 
     # Map the responses to scores (0-4)
     scores = [options.index(r) for r in responses]
+    total_score = sum(scores)
     
     # Submit button
     if st.button('Submit'):
