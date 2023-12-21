@@ -24,9 +24,9 @@ def main():
     # Submit button
     if st.button('Submit'):
         if total_score >= 9:
-            st.write("Your CAS score is", total_score, ". This indicates dysfunctional coronavirus-related anxiety. Please consult a mental health professional.")
+            st.write("Your CAS score is **" + str(total_score) + "**. This indicates dysfunctional coronavirus-related anxiety. Please consult a mental health professional.")
         else:
-            st.write("Your CAS score is", total_score, ". This doesn't indicate dysfunctional coronavirus-related anxiety. \
+            st.write("Your CAS score is **" + str(total_score) + "**. This doesn't indicate dysfunctional coronavirus-related anxiety. \
             But, if you feel something's wrong, you should still consult a mental health professional.")
 if __name__ == "__main__":
     main()
