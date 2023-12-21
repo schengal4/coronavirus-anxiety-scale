@@ -27,7 +27,7 @@ def main():
             st.write("Your score is", total_score, ". This indicates dysfunctional coronavirus-related anxiety. Please consult a mental health professional.")
         else:
             st.write("Your score is", total_score, ". This doesn't indicate dysfunctional coronavirus-related anxiety. \
-            If you feel something's wrong, though, you should still consult a mental health professional.")
+            But, if you feel something's wrong, you should still consult a mental health professional.")
         st.write("Please note: This tool is not a substitute for professional medical advice.")
 
 if __name__ == "__main__":
