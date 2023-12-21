@@ -2,7 +2,7 @@ import streamlit as st
 
 def main():
     st.title("Coronavirus Anxiety Scale (CAS)")
-    st.write("**Instructions"": Please indicate how often you've experienced the following over the *last 2 weeks*.")
+    st.write("**Instructions**: Please indicate how often you've experienced the following over the *last 2 weeks*.")
 
     # Define the questions
 
