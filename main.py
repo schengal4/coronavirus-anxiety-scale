@@ -7,7 +7,7 @@ def main():
     # Questions and corresponding options
     options = ['Not at all', 'Rare, less than a day or two', 'Several days', 'More than 7 days', 'Nearly every day over the last 2 weeks']
     questions = [
-        "I felt dizzy, lightheaded, or faint when I read or listened to news about the coronavirus.",
+        "I felt dizzy, lightheaded, or faint, when I read or listened to news about the coronavirus.",
         "I had trouble falling or staying asleep because I was thinking about the coronavirus.",
         "I felt paralyzed or frozen when I thought about or was exposed to information about the coronavirus.",
         "I lost interest in eating when I thought about or was exposed to information about the coronavirus.",
